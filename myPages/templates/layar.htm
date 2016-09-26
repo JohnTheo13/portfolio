@@ -1,0 +1,13 @@
+	<div class="container">
+		<div class="row">
+        	<h4 class="textColor all">Layar Demos</h4>
+        </div>
+        <div class="row" ng-repeat="data in adata">
+        	<div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+           	  <p class="textColor">{{data.description}}</p><!--add download link-->
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+            	<img class="img-fluid img-rounded center-block" ng-src="{{data.url}}"/>
+            </div>
+        </div>
+	</div>

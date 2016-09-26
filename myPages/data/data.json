@@ -1,0 +1,14 @@
+{
+"images":
+	[
+	{"description":"The following are some of the projects I made for Layar over the last year. Most of them are demos to showcase clients ways to use the app. Here is the QR code to download Layar app and check these projects yourself. You are adviced to check the experience in detach mode.","url":"./images/large.png"},
+	{"description":"This trigger image will be used in the upcoming HSBC app. After scanning, a statue appears surrounded with ./images connected to it. I have used Blender 3D to export the entire scene and to add the arrays and the ./images, which link to a PHP Page I created with the jssor slider plug-in. In this app a php script runs that gives different content depending on the app’s language parameter.","url":"./images/hsbc-markers gold-05.jpg"},
+	{"description":"In the following example people are prompt to scan the image to get a discount, I have created an interactive button which is a PHP Page that gets the devices IP and depending if this device is between the first 10 devices that scanned this image or if this device has already scanned the image a different message appears.","url":"./images/Artboard 1.png"},
+	{"description":"In the following example after scanning the image, 3 interactive buttons appear, each one links to a different page with a different shoe.  Each of these is a simple HTML Page with a swipe plug-in that I changed to add the 360 rotation.","url":"./images/marker-1.png"},
+	{"description":"In the following example after scanning the image a quiz appears, depending on the answers, clients are linked to a different location. It’s an HTML Page in which I used jQuery, bootstrap CSS and JavaScript to create this quiz.","url":"./images/dressing marker.png"},
+	{"description":"In this example clients get a list of products they need in order to cook moussaka and the approximately cost. There is also the option to get an email with the detailed recipe or watch a youtube video.","url":"./images/Screen Shot 2015-12-22 at 15.38.33.png"},
+	{"description":"After scanning this image a trailer appears with two buttons on the one side, one of them is interactive and provides access to the next trailer. This demo was made to showcase Layar’s new functions.","url":"./images/ReferencePoster.png"},
+	{"description":"This demo was creatde for Dunhill to showcase how their project will be implemented. I used Blender 3D to export the 3D objects and created the entire experience using Python to generate the .json file. After scanning we are moved to a room with two buttons. One of them links to a different room where we can find an interactive TV!","url":"./images/original.jpg"},
+	{"description":"Again for Dunhill I’ve created a 3D package with cigarettes and used Python to add some animation after taping the package.","url":"./images/d.jpg"}
+	]
+}

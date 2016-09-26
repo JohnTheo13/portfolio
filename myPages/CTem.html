@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="stylesheet" href="css/bootstrap.css" />
+<title>MyPortfolio</title>
+<style type="text/css">
+	body{ background-color:#272517 !important;
+	background-repeat:repeat;
+	background-size:cover;
+	margin:2%;}
+	.textColor{
+		color:#CCC;}
+	.navbarIn{background-color:#BEBCAB ;}	
+  .all{text-align:center;}
+</style>
+<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript">
+$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+<div class="container-fluid">
+    <nav class="navbar navbar-divided-top navbar-dark bg-faded navbarIn">
+    <a class="navbar-brand">Portfolio</a>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home" data-toggle="tab" role="tab">My CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#link" role="tab">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  data-toggle="tab" href="#" role="tab">Another link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  data-toggle="tab" href="#" role="tab">Disabled</a>
+          </li>
+        </ul>
+    </nav>
+    <div class="tab-content">
+      <div class="tab-pane active" id="home" role="tabpanel">
+      	<div class="row"><p>dfgfdhdfdhfds</p></div>
+      </div>
+      <div class="tab-pane" id="link" role="tabpanel" ng-app="Layar" ng-controller="MainCtrl">
+      	<div class="row">
+          <h4 class="textColor all">Layar Demos</h4>
+        </div>
+        <div class="row" ng-repeat="data in adata">
+          <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+              <p class="textColor">{{data.description}}</p><!--add download link-->
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+              <img class="img-fluid img-rounded center-block" ng-src="{{data.url}}"/>
+            </div>
+        </div><!--EndRow-->
+      </div>
+      <div class="tab-pane" id="messages" role="tabpanel">...</div>
+      <div class="tab-pane" id="settings" role="tabpanel">...</div>
+    </div>
+</div><!--ContainerEnd-->
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/getData.js"></script>
+</body>
+</html>
