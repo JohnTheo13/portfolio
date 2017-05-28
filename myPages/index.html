@@ -1,53 +1,104 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/extra.css" />
-    <title>MyPortfolio</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/extra.css" />
+<link rel="stylesheet" href="css/map.css" />
+<link rel="stylesheet" href="css/star.css" />
+<title>MyPortfolio</title>
+<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-mocks.js"></script>
 </head>
-
 <body ng-app='mainApp'>
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript">
-    $('#myTab a').click(function(e) {
-        e.preventDefault()
-        $(this).tab('show')
-    })
-    </script>
-    <div class="container-fluid">
-        <nav class="navbar navbar-divided-top navbar-dark bg-faded navbarIn">
-            <a class="navbar-brand">Portfolio</a>
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#home" data-toggle="tab" role="tab">My CV</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#link" role="tab">Layar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#mobile" role="tab">Mobile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#ksulo" role="tab">Ksulourgeio</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="tab-content">
-            <div ng-view></div>
-        </div>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript">
+$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-divided-top navbar-dark bg-faded navbarIn fixedNav" >
+    <a class="navbar-brand">Portfolio</a>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#home" role="tab">My CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#link" role="tab">Layar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  data-toggle="tab" href="#mobile" role="tab">Mobile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#map" role="tab">Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  data-toggle="tab" href="#images" role="tab">Images</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  data-toggle="tab" href="#ksulo" role="tab">Ksulourgeio</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link"  data-toggle="tab" href="#angularPlay" role="tab">Play Angular</a>
+          </li>
+        </ul>
+    </nav>
+  </div>
+    <div class="tab-content" style="margin-top:100px">
+      <div ng-view class="container-fluid"></div>
     </div>
-    <!--ContainerEnd-->
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/layar.js"></script>
-    <script type="text/javascript" src="js/ksulo.js"></script>
+</div><!--ContainerEnd-->
+<script type="text/javascript">
+(function ()  {
+var navLink = document.getElementById('myTab').children
+var loc =window.location.href 
+if(loc.substr(loc.length - 1) === '/'){
+        loc = loc.slice(0, -1);
+    }
+let parts = loc.split('/');
+switch(parts[6]){
+  case 'home':
+    navLink[0].children[0].className += " active";
+    break;
+  case 'link':
+    navLink[1].children[0].className += " active";
+    break;
+  case 'mobile':
+    navLink[2].children[0].className += " active";
+    break;
+  case 'map':
+    navLink[3].children[0].className += " active";
+    break;
+  case 'images':
+    navLink[4].children[0].className += " active";
+    break;
+  case 'ksulo':
+    navLink[5].children[0].className += " active";
+    break;
+  case 'angularPlay':
+    navLink[6].children[0].className += " active";
+    break;
+  default:
+    navLink[0].children[0].className += " active";
+}
+}());
+</script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/layar.js"></script>
+<script type="text/javascript" src="js/ksulo.js"></script>
+<script type="text/javascript" src="js/play.js"></script>
+<script  type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUcK5RTnAcR3ELtRtwz-C16akR5sWHsM8&callback=initMap"></script>
+<script type="text/javascript" src = "js/map.js"></script>
+<script type="text/javascript" src="js/ng-map.min.js"></script>
+<script type="text/javascript" src="js/getService.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
 </body>
-
 </html>

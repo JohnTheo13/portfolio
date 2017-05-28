@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Light Theme</title>
+    <link href="css/lego.css" rel="stylesheet" type="text/css">
+    <link href="css/extra.css" rel="stylesheet" type="text/css">
+    <!--Angular-->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <!--Jquery -->
+
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/lego2.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header line">
+        <div class="line">
+            <div class="col1">
+                <img src="images/lego.png" class="brick" alt="" />
+            </div>
+            <div>
+                <img src="images/youtube.png" class="social" alt="y" />
+                <img class="social" src="images/twitter.png" alt="t" />
+                <img class="social" src="images/facebook.png" alt="f" />
+            </div>
+        </div>
+    </header>
+    <!-- Main Container -->
+    <div class="container" ng-app="myapp">
+        <div class="line">
+            <h1 class="text">WIN enn doos met<br>2 NIEUWE soorten LEGO!</h2>
+        </div>
+        <div class="line none">
+            <div class="col3">
+                <h5 class="intro sel"> Selecteer uw kuezes en klik op: Volgende </h5>
+            </div>
+            <div class="col1">
+                <h3 class="intro vol"> Volgende </h3>
+            </div>
+        </div>
+        <div class="line">
+            <div class="col2 time img-round"></div>
+        </div>
+        <!-- Lego Section -->
+        <div class="line none" ng-controller="ctrlForm">
+            <div class="col1" ng-repeat="l in url">
+                <img src="{{l.url}}" class=" img-round leg dark" id="{{l.id}}" alt="" />
+            </div>
+                <div class="col2" id="form">
+                    <form>
+                        <input type="radio" name="gender" value="female" >Female<input type="radio" name="gender" value="male" >Male<br>
+                        <input type="text"><br><input type="text"><br>
+                        <select name="day">
+                        <option>Day</option>
+                        <option ng-repeat="i in getNumber(myOtherNumber) track by $index" value="{{$index+1}}">{{$index+1}}</option>
+                    </select>
+                        <select class="month">
+                        <option>Month</option>
+                        <option ng-repeat="i in getNumber(myNumber) track by $index" value="{{$index+1}}">{{$index+1}}</option>
+                    </select>
+                        <select class="year">
+                        <option>Year</option>
+                        <option  ng-repeat="i in yearsArray" value="{{i}}">{{i}}</option>
+                    </select> <br>
+                        <input type="checkbox">I Agree
+                    </form>
+                    <div class="col4 gratis img-round"></div>
+                </div>
+        </div>
+        <div class="line mobile">
+            <div class="col4">
+                <h5 class="intro sel"> Selecteer uw kuezes en klik op: Volgende </h5>
+            </div>
+        </div>
+        <div class="line mobile" ng-controller="ctrlForm">
+            <div class="col2" ng-repeat="m in mobile">
+                <img src="{{m}}" class="leg img-round dark" alt="" />
+            </div>
+            <div class="col4" id="mform">
+                    <form>
+                        <input type="radio" name="gender" value="female" >Female <input type="radio" name="gender" value="male">Male<br>
+                        <input type="text"><br><input type="text"><br>
+                        <select name="day">
+                        <option>Day</option>
+                        <option ng-repeat="i in getNumber(myOtherNumber) track by $index" value="{{$index+1}}">{{$index+1}}</option>
+                    </select>
+                        <select class="month">
+                        <option>Month</option>
+                        <option ng-repeat="i in getNumber(myNumber) track by $index" value="{{$index+1}}">{{$index+1}}</option>
+                    </select>
+                        <select class="year">
+                        <option>Year</option>
+                        <option  ng-repeat="i in yearsArray" value="{{i}}">{{i}}</option>
+                    </select> <br>
+                        <input type="checkbox">I Agree
+                    </form>
+                    <div class="col4 gratis img-round"></div>
+                </div>
+
+        </div>
+        <div class="line mobile" >
+            <div class="col4">
+                <h3 id="mobileVolg"> Volgende </h3>
+            </div>
+        </div>
+    </div>
+    <!-- Main Container Ends -->
+</body>
+
+</html>
+

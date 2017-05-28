@@ -7,6 +7,7 @@ app.factory('getData', ['$http', function($http) {
           data.push(adata.images[i]);
       }
       return data;
+      // or depends what you need testArr[0] = data.images;
     }).
     error(function(data) {
       return err; // log error

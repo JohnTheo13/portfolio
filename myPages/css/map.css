@@ -1,0 +1,26 @@
+#map_canvas{
+ width:600px; 
+ height:500px;
+}
+
+body{
+	background-repeat:repeat;
+	background-size:cover;
+	margin:2%;
+}
+.textColor{
+	color:#CCC;
+}	
+.all{
+	text-align:center;
+	padding:2px;
+}
+.blackMap{
+	background-color: #000000;
+	border-radius: 35px;
+	height:60px;
+}
+.headText{
+	color: #ffffff; font-size: x-large; height: 20px
+}
+

@@ -1,0 +1,105 @@
+
+
+    <div ng-controller="HboCtrl">
+      <!--Container-->
+      <div class="container" style="margin-top: -70px" >
+          <div class="row" >
+            <div class="col-md-8">
+                <div class="star-container" data-ng-init="init()">
+                    <canvas id="canvas" width="420" height="420"></canvas>
+                    <br>
+                    <br>
+                </div>
+                <div class="inputs">
+                    <label>Velocity:</label>
+                    <input class="number" type="number" max="100" min="-100" ng-model="inputValue" ng-change="inputChange()"  />
+                    <input id="slider" ng-change="velocityChange()" type="range" ng-model="sliderValue" min="-300" max="100" data-drag="true" step="1" value="{{sliderValue}}" style="width: 400px" />
+                </div>
+            </div>
+            <div class="col-md-4" style="margin-top: 140px;" >
+                <h5>Star Doppler effect</h5>
+                <p>
+                    It's a simple simulation that exaggerates how a star changes 
+                    colour as it moves toward and away from an observer.
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class="container" style="margin-top: 40px;">
+            <h5>Angular Play</h5>
+            <p>Choose from 1st box and 2nd becomes available and so on. Its project to illustrate angular functions.</p>
+            <div class="row outerRow" >
+                <div class="col-md-6">
+                    <h3>Shows</h3>
+                    <div class="row innerRow" ng-repeat="d in data | filter :{block:'A'}">
+                        <div class="col-md-7 " >
+                            <p><strong>{{d.value}}</strong></p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>${{d.price.toFixed(2) }}</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img alt="didi"  src="images/{{sign(d.choosen)}}" class="sign {{d.available?'active':'nonActive'}}" ng-click="check($index)" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <h3>Movies</h3>
+                    <div class="row innerRow"  ng-repeat="d in data | filter :{block:'B'}">
+                        <div class="col-md-7 " >
+                            <p><strong>{{d.value}}</strong></p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>${{d.price.toFixed(2) }}</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img style="display:{{!d.available &&'none'}}" 
+                            alt="didi"  src="images/{{sign(d.choosen)}}" class="sign {{d.available?'active':'nonActive'}}" ng-click="check($index+2)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row outerRow">
+                <div class="col-md-6 " >
+                    <h3>New movies/shows</h3>
+                    <div class="row innerRow" ng-repeat="d in data | filter :{block:'C'}">
+                        <div class="col-md-7 " >
+                            <p><strong>{{d.value}}</strong></p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>${{d.price.toFixed(2) }}</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img style="display:{{!d.available &&'none'}}"
+                             alt="didi"  src="images/{{sign(d.choosen)}}" class="sign {{d.available?'active':'nonActive'}}" ng-click="check($index+5)" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 "  >
+                    <h3>How to watch</h3>
+                    <div class="row innerRow" ng-repeat="d in data | filter :{block:'D'}">
+                       <div class="col-md-7 " >
+                            <p><strong>{{d.value}}</strong></p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>${{d.price.toFixed(2) }}</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img style="display:{{!d.available &&'none'}}"
+                            alt="didi"  src="images/{{sign(d.choosen)}}" class="sign {{d.available?'active':'nonActive'}}" ng-click="check($index+9)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 outerRow">
+                    <p class="total" >Total Price: ${{total>0?total.toFixed(2):'xx.xx'}}</p>
+                </div>
+                <div class="col-md-6" style="text-align: center">
+                    <button ng-click="clean()" type="button" style="height: 62px" 
+                            class="btn btn-info btn-lg" >Clean Selections
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>

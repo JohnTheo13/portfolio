@@ -1,0 +1,16 @@
+<div class="container" ng-controller="MapCtrl as vm">
+        <div class="row">
+            <h3 class="all headText">Amsterdam Parkings</h3>
+        </div>
+        <div class="row" >
+          <ng-map zoom="12" center="52.368306, 4.899694" >
+            <marker on-click="action({{d.properties.layers['parking.garage'].data.FreeSpaceShort}},{{d.properties.layers['parking.garage'].data.ShortCapacity}})"  ng-repeat="d in arrNew" icon="{{d.iconUrl}}" shape="{{MapCtrl.shape}}" position="{{d.geometry.coordinates[1.0]}}, {{d.geometry.coordinates[0.0]}}" optimized=false >
+            </marker>
+          </ng-map>
+        </div>
+        <div class="row border blackMap"><p class="all">Total Capacity:{{total}}<br />Free positions:<strong>{{available}}</strong></div>
+        <div class="row"><p class = "textColor all">In this example I've been using CitySDK Linked Data API to retrieve the data for Amsterdam Parkings and show them on the map, when clicking on a traffic light you get some info about this Parking</p></div>
+	</div>
+
+
+

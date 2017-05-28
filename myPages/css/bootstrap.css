@@ -3607,7 +3607,8 @@ input[type="button"].btn-block {
 
 @media (min-width: 544px) {
   .navbar {
-    border-radius: .25rem;
+    border-radius:0 0 .25rem .25rem;
+}
   }
 }
 

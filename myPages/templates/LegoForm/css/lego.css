@@ -1,0 +1,483 @@
+@charset "UTF-8";
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-webkit-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+html {
+    font-size: 16px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Body */
+
+body {
+    background-color: #FFFFFF;
+    background-image: url(../images/Background.png);
+    background-size: 100% 110%;
+    background-repeat: no-repeat;
+    background-color: #7dd7fb;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.text {
+    text-align: center;
+    padding-top: 0.28rem;
+}
+
+.line {
+    /* [disabled]margin-right: -.10375rem; */
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+    padding-bottom: 0.1rem;
+    padding-top: 0.1rem;
+    /* display: flex;*/
+}
+
+.line1 {
+    display: flex;
+}
+
+.line::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.col1 {
+    width: 24%;
+}
+
+.col2 {
+    width: 49%;
+}
+
+.col3 {
+    width: 74%;
+}
+
+.col4 {
+    width: 100%;
+}
+
+.col1,
+.col2,
+.col3,
+.col4 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+    padding-bottom: 0.1rem;
+    padding-top: 0.1rem;
+    float: left;
+    margin: 0.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h1 {
+    color: #F0E9E9 !important;
+    text-shadow: 0px 2px #565252;
+    font-size: 2.3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+img {
+    max-width: 90%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.img-round {
+    border-radius: 1rem;
+}
+
+.select {
+    background-image: url(../images/selecter2.png);
+    vertical-align: text-top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 2.4rem;
+}
+
+.volgende {
+    background-image: url(../images/VolgendeButton.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 2.4rem;
+    margin-top: 0% !important;
+    pointer-events: none;
+    -webkit-filter: brightness(55%);
+    /* Safari */
+    filter: brightness(55%);
+}
+
+.mobileVolg {
+    background-image: url(../images/mobile/volgende.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 2.4rem;
+    margin-top: 0% !important;
+    display: inline-block;
+    visibility: hidden;
+    -webkit-filter: brightness(55%);
+    /* Safari */
+    filter: brightness(55%);
+}
+
+.time {
+    background-image: url(../images/noTime.png);
+    vertical-align: text-top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 3.8rem;
+    display: none;
+    left: 25%;
+}
+
+.gratis {
+    background-image: url(../images/mobile/gratisVerder.png);
+    vertical-align: text-top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 3.8rem;
+    display: none;
+}
+
+
+/* lego */
+
+.dark {
+    -webkit-opacity: 0.7;
+    /* Safari */
+    oapcity: 0.7;
+}
+
+.clicked {
+    -webkit-box-shadow: 0 10px 12px -4px black;
+    -moz-box-shadow: 0 10px 12px -4px black;
+    box-shadow: 0 10px 12px -4px black;
+}
+
+.lego {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 18.38rem;
+    pointer-events: auto;
+}
+
+.shadow {
+    -webkit-box-shadow: 0 10px 12px -4px black;
+    -moz-box-shadow: 0 10px 12px -4px black;
+    box-shadow: 0 10px 12px -4px black;
+}
+
+.city {
+    background-image: url(../images/LegoCity.png);
+}
+
+.city:hover,
+.star:hover,
+.minecraft:hover,
+.princess:hover,
+.friends:hover,
+.nexo:hover,
+.elve:hover,
+.duplo:hover {
+    filter: brightness(100%) !important;
+    -webkit-box-shadow: 0 10px 12px -4px black;
+    -moz-box-shadow: 0 10px 12px -4px black;
+    box-shadow: 0 10px 12px -4px black;
+}
+
+.star {
+    background-image: url(../images/LegoStarWars.png);
+}
+
+.minecraft {
+    background-image: url(../images/LegoMinecraft.png);
+}
+
+.princess {
+    background-image: url(../images/LegoPrincess.png);
+}
+
+.friends {
+    background-image: url(../images/LegoFriends.png);
+}
+
+.nexo {
+    background-image: url(../images/LegoNexo.png);
+}
+
+.elve {
+    background-image: url(../images/LegoElves.png);
+}
+
+.duplo {
+    background-image: url(../images/LegoDuplo.png);
+}
+
+
+/* Container */
+
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+}
+
+
+/*Form*/
+
+form {
+    background-color: rgba(0, 0, 0, 0.18);
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#form {
+    display: none;
+}
+
+input[type=text] {
+    width: 95%;
+    padding: 1%;
+    margin: 2%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+input[type=text]:focus {
+    -webkit-box-shadow: 0 10px 12px -4px black;
+    -moz-box-shadow: 0 10px 12px -4px black;
+    box-shadow: 0 10px 12px -4px black;
+}
+
+input[type=radio] {
+    margin: 2%;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+select {
+    width: 28%;
+    padding: 2%;
+    margin: 2%;
+    box-sizing: border-box;
+}
+
+input[type=checkbox] {
+    padding: 2%;
+    margin: 2%;
+    box-sizing: border-box;
+}
+
+
+/* Header */
+
+header {
+    position: static;
+    top: 0%;
+    width: 100%;
+    height: 6rem;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #353635;
+    overflow: visible;
+}
+
+.brick {
+    position: absolute;
+    left: 40%;
+    border-radius: 0.3rem;
+}
+
+.social {
+    float: right !important;
+    margin-right: 1%;
+    margin-top: 1.5rem;
+}
+
+
+/* Mobile */
+
+
+/* Small Tablets */
+
+@media (min-width: 320px)and (max-width: 767px) {
+ .leg{
+    margin-left: 3.5%;
+    margin-top: 0%;
+    margin-bottom: 4%
+ }
+ .img-round {
+    border-radius: 0.5rem;
+}
+    
+    .sel{
+        font-size:10px;
+        padding-left: 0% ;
+        padding-right:0% ;
+    }
+    .text{
+        font-size:18px;
+    }
+    .lego {
+        height: 4.4rem;
+        margin: 1.5%;
+    }
+   
+    .mobile{
+        display:block !important;
+    }
+    .none{
+        display:none;
+    }
+    .city {
+        background-image: url(../images/mobile/mobileCity.png);
+    }
+    .star {
+        background-image: url(../images/mobile/mobileStars.png);
+    }
+    .minecraft {
+        background-image: url(../images/mobile/mobileMine.png);
+    }
+    .princess {
+        background-image: url(../images/mobile/mobilePrincess.png);
+    }
+    .friends {
+        background-image: url(../images/mobile/mobileFriends.png);
+    }
+    .nexo {
+        background-image: url(../images/mobile/mobileNexo.png);
+    }
+    .elve {
+        background-image: url(../images/mobile/mobileElves.png);
+    }
+    .duplo {
+        background-image: url(../images/mobile/mobileDuplo.png);
+    }
+    .col1,
+    .col2,
+    .col3,
+    .col4 {
+        float: left;
+        margin-left: 0.5%;
+        padding: 0%;
+    }
+
+
+    .col1,
+    .col3 {
+        width: 49%;
+    }
+    .col3 {
+        width: 100%;
+    }
+    .brick {
+        left: 4%;
+    }
+    .volgende {
+        display: none;
+    }
+    .mobileVolg {
+        visibility: visible;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    .time {
+        width: 100% !important;
+        margin-top: 1.5%;
+        left: 0%;
+    }
+    #form {
+        width: 100% !important;
+    }
+    .brick,
+    .social {
+        max-width: 50%;
+    }
+}
+
+
+/* Small Desktops */
+
+@media (min-width: 885px) and (max-width: 1096px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 992px) {
+    .col1,
+    .col2,
+    .col3,
+    .col4 {
+        float: left;
+    }
+}

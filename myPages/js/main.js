@@ -1,4 +1,4 @@
-var app =  angular.module('mainApp',['ngRoute']);
+var app =  angular.module('mainApp',['ngRoute','ngMap']);
 
 app.config(function ($routeProvider) {
   $routeProvider
@@ -18,7 +18,19 @@ app.config(function ($routeProvider) {
       controller: 'KsuloCtrl',
       templateUrl: 'templates/ksulo.htm'
     })
+    .when('/map', {
+      controller: '',
+      templateUrl: 'templates/map.html'
+    })
+    .when('/images', {
+      controller: '',
+      templateUrl: 'templates/dashtest2.htm'
+    })
+    .when('/angularPlay',{
+      controller:'HboCtrl',
+      templateUrl:'templates/HBO.htm'
+    })
     .otherwise({
-      redirectTo: 'home'
+      redirectTo: '/home'
     });
 });
