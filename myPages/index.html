@@ -57,39 +57,40 @@ $('#myTab a').click(function (e) {
     </div>
 </div><!--ContainerEnd-->
 <script type="text/javascript">
-(function ()  {
-var navLink = document.getElementById('myTab').children
-var loc =window.location.href 
-if(loc.substr(loc.length - 1) === '/'){
-        loc = loc.slice(0, -1);
-    }
-let parts = loc.split('/');
-switch(parts[6]){
-  case 'home':
-    navLink[0].children[0].className += " active";
-    break;
-  case 'link':
-    navLink[1].children[0].className += " active";
-    break;
-  case 'mobile':
-    navLink[2].children[0].className += " active";
-    break;
-  case 'map':
-    navLink[3].children[0].className += " active";
-    break;
-  case 'images':
-    navLink[4].children[0].className += " active";
-    break;
-  case 'ksulo':
-    navLink[5].children[0].className += " active";
-    break;
-  case 'angularPlay':
-    navLink[6].children[0].className += " active";
-    break;
-  default:
-    navLink[0].children[0].className += " active";
-}
-}());
+  (function ()  {
+    var navLink = document.getElementById('myTab').children
+    var loc =window.location.href 
+    if(loc.substr(loc.length - 1) === '/'){
+            loc = loc.slice(0, -1);
+        }
+    let parts = loc.split('/');
+
+    switch(parts[6]){   // on server is parts[5]
+      case 'home':
+        navLink[0].children[0].className += " active";
+        break;
+      case 'link':
+        navLink[1].children[0].className += " active";
+        break;
+      case 'mobile':
+        navLink[2].children[0].className += " active";
+        break;
+      case 'map':
+        navLink[3].children[0].className += " active";
+        break;
+      case 'images':
+        navLink[4].children[0].className += " active";
+        break;
+      case 'ksulo':
+        navLink[5].children[0].className += " active";
+        break;
+      case 'angularPlay':
+        navLink[6].children[0].className += " active";
+        break;
+      default:
+        navLink[0].children[0].className += " active";
+  }
+  }());
 </script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/layar.js"></script>

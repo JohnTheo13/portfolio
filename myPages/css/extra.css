@@ -12,6 +12,23 @@ body {
     top: 0px;
 }
 
+iframe {
+    border: none;
+}
+
+.big-frame {
+    margin: 0px 0px 30px;
+    left: -4%;
+    height: 1200px;
+    position: relative;
+    width: 104%;
+    -webkit-transform: translate(1%,0%);
+   -moz-transform: translate(1%,0%);
+    -ms-transform: translate(1%,0%);
+     -o-transform: translate(1%,0%);
+        transform: translate(1%,0%);
+}
+
 .textColor {
     color: #CCC;
 }
