@@ -16,12 +16,16 @@ iframe {
     border: none;
 }
 
+#app {
+    display: none;
+}
+
 .big-frame {
-    margin: 0px 0px 30px;
-    left: -4%;
-    height: 1200px;
+    margin: -8.4vh 0px 30px;
+    left: -1.9%;
+    height: 120vh;
     position: relative;
-    width: 104%;
+    width: 100.65%;
     -webkit-transform: translate(1%,0%);
    -moz-transform: translate(1%,0%);
     -ms-transform: translate(1%,0%);
@@ -93,6 +97,7 @@ iframe {
     height: 30px;
 }
 
+
 .sign:hover{
     border: 3px solid #00f3ff;;
     border-radius: 3px;
@@ -108,4 +113,8 @@ iframe {
 .modalFooter{
     display: -webkit-inline-box;
     float: left;
+}
+
+.img-flex {
+    
 }

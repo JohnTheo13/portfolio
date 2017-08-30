@@ -30,6 +30,10 @@ app.config(function ($routeProvider) {
       controller:'HboCtrl',
       templateUrl:'templates/HBO.htm'
     })
+    .when('/react',{
+      controller:'',
+      template:''
+    })
     .otherwise({
       redirectTo: '/home'
     });

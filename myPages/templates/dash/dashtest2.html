@@ -53,10 +53,10 @@
 
 <body ng-app="MyApp">
     <div class="container-fluid" ng-controller="MainCtrl">
-        <div class="row" infinite-scroll="add()" infinite-scroll-distance='0'>
+        <div class="row flex-container" infinite-scroll="add()" infinite-scroll-distance='0'>
             <div id="{{data.name}}" class="col-md-3 col-lg-3 col-xl-3" ng-repeat="data in adata">
                 <!--ng-if="$index<50" or |limitTo: 50-->
-                <img ng-src="{{data.url}}" class="img-fluid img-rounded center-block" ng-click="delete($index)">
+                <img ng-src="{{data.url}}" class="img-fluid img-rounded center-block img-flex" ng-click="delete($index)">
                 <p class="textColor">{{data.name}}</p>
             </div>
         </div>
