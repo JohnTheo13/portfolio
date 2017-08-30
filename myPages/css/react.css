@@ -17,6 +17,14 @@
     height: 50px;
 }
 
+.st0{
+  fill:#BFBEBE;
+}
+.st0:hover {
+ fill:blue;
+}
+
+
 input:checked + .slider:before {
     transform: translateX(-46px);
 }
@@ -126,3 +134,7 @@ input[type=range]::-ms-thumb {
 
 input[type=range]:focus::-ms-thumb {
   background: #BEBCAB; }
+
+input[type=text] {
+  color: black;
+}
