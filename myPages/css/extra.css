@@ -12,6 +12,27 @@ body {
     top: 0px;
 }
 
+iframe {
+    border: none;
+}
+
+#app {
+    display: none;
+}
+
+.big-frame {
+    margin: -8.4vh 0px 30px;
+    left: -1.9%;
+    height: 120vh;
+    position: relative;
+    width: 100.65%;
+    -webkit-transform: translate(1%,0%);
+   -moz-transform: translate(1%,0%);
+    -ms-transform: translate(1%,0%);
+     -o-transform: translate(1%,0%);
+        transform: translate(1%,0%);
+}
+
 .textColor {
     color: #CCC;
 }
@@ -76,6 +97,7 @@ body {
     height: 30px;
 }
 
+
 .sign:hover{
     border: 3px solid #00f3ff;;
     border-radius: 3px;
@@ -91,4 +113,8 @@ body {
 .modalFooter{
     display: -webkit-inline-box;
     float: left;
+}
+
+.img-flex {
+    
 }
