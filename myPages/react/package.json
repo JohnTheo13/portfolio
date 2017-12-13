@@ -23,9 +23,13 @@
     "react-swipeable-views": "^0.12.1"
   },
   "devDependencies": {
+    "@fixico/meth": "github:fixico/meth#master",
+    "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.4",
     "node-sass": "^4.5.3",
+    "radium": "^0.19.6",
     "sass-loader": "^6.0.6",
+    "small-bricks": "github:johntheo13/small-bricks#master",
     "style-loader": "^0.18.2"
   }
 }

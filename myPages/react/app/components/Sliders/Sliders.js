@@ -17,21 +17,27 @@ class SlidersSection extends Component {
             service:10,
             accuracy:10,
             toogle: true,
+            total: 10,
         }
     }
-
 
     handleChange (e) {      
         //let x = document.getElementById("myRange").value
         if(e.target.id=="price"){
+            let total = Math.round(((parseInt(e.target.value) + parseInt(this.state.service) + parseInt(this.state.accuracy)) / 3) * 10) / 10
+            this.setState({ total })
             this.setState({
               price: e.target.value
             })
         } else if (e.target.id=="service"){
+            let total = Math.round(((parseInt(this.state.price) + parseInt(e.target.value) + parseInt(this.state.accuracy)) / 3) * 10) / 10
+            this.setState({ total })
             this.setState({
               service: e.target.value
             })
         } else if (e.target.id=="accuracy"){
+            let total = Math.round(((parseInt(this.state.price) + parseInt(this.state.service) + parseInt(e.target.value)) / 3) * 10) / 10
+            this.setState({ total })
             this.setState({
               accuracy: e.target.value
             })            
@@ -81,9 +87,7 @@ class SlidersSection extends Component {
             <Col md={2} >
              {this.state.toogle &&
                 <TotalReviews  
-                    price={this.state.price}
-                    service={this.state.service}
-                    accuracy={this.state.accuracy}
+                    total={this.state.total}
                     style={totalStyle}
                         />}
             </Col>
