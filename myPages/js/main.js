@@ -34,6 +34,10 @@ app.config(function ($routeProvider) {
       controller:'',
       template:''
     })
+    .when('/javascript',{
+      controller:'',
+      templateUrl:'templates/javascript.htm'
+    })
     .otherwise({
       redirectTo: '/home'
     });
